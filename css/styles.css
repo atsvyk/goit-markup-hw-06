@@ -891,6 +891,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 
 .form-svg {
   position: absolute;
+  width: 15px;
+  height: 15px;
   left: 12px;
   bottom: 11px;
   fill: var(--secondary-title-color);
@@ -962,12 +964,17 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 }
 
 .check-agreement-conditions:checked + .label-checkbox::after {
-  border: none;
   background-image: url(../icons/check.svg);
-  background-size: 11px 8px;
-  background-position: 3px 4px;
+  background-color: #2196f3;
   background-repeat: no-repeat;
-  background-color: var(--accent-color);
+  background-position: center;
+  background-size: contain;
+  border: 2px solid rgba(33, 33, 33, 0);
+}
+
+.check-agreement-conditions:hover + .label-checkbox::after,
+.check-agreement-conditions:focus + .label-checkbox::after {
+  border: 2px solid var(--accent-color);
 }
 
 .link-agreement-conditions,
@@ -976,6 +983,11 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.label-checkbox:focus,
+.label-checkbox:hover  {
+  cursor: pointer;
 }
 
 .link-agreement-conditions {
